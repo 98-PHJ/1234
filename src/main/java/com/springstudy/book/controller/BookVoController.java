@@ -106,7 +106,7 @@ public class BookVoController {
 		}  
 
 		return mav;  
-	} 
+	}
 
 	@RequestMapping(value = "/deleteVo", method = RequestMethod.POST)  
 	public ModelAndView deletePost(BookVo bookVo) {  
@@ -118,7 +118,7 @@ public class BookVoController {
 		}else {  
 			int bookId = bookVo.getBook_id();   
 			mav.setViewName("redirect:/detailVo?book_id=" + bookId);  
-		}  
+		}
 
 		return mav;  
 	} 

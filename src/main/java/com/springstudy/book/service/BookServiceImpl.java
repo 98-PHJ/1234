@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.springstudy.book.dao.BookDao;
 
-@Service
+@Service // Controller와 DAO의 중간역할
 public class BookServiceImpl implements BookService{
 	
 	@Autowired

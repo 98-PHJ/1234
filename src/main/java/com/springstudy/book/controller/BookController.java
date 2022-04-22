@@ -106,22 +106,22 @@ public class BookController {
 		mav.addObject("data", detailMap);  
 		mav.setViewName("update");  
 		return mav;  
-	}  
+	}
 
 	@RequestMapping(value = "/update", method = RequestMethod.POST)  
 	public ModelAndView updatePost(@RequestParam Map<String, Object> map) {  
-		ModelAndView mav = new ModelAndView();  
+		ModelAndView mav = new ModelAndView();
 
 		boolean isUpdateSuccess = bookService.edit(map);  
 		if (isUpdateSuccess) {  
 			String bookId = map.get("bookId").toString();  
-			mav.setViewName("redirect:/detail?bookId=" + bookId);  
-		}else {  
-			mav = this.update(map);  
-		}  
+			mav.setViewName("redirect:/detail?bookId=" + bookId);
+		}else {
+			mav = this.update(map);
+		}
 
-		return mav;  
-	} 
+		return mav;
+	}
 
 	@RequestMapping(value = "/delete", method = RequestMethod.POST)  
 	public ModelAndView deletePost(@RequestParam Map<String, Object> map) {  

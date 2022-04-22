@@ -17,7 +17,7 @@
 	<![CDATA[  
 		select  book_id,title,category,	price,insert_date  
 		from  book  
-		where 1 = 1  
+		where 1 = 1 
 	]]>  
 	<if test="keyword != null and keyword != ''">  
 		and (title like CONCAT('%',#{keyword},'%') 
@@ -30,7 +30,7 @@
 		<![CDATA[
 			select book_id,title,category,price,insert_date
 			from book 
-			where book_id = #{bookId} 
+			where book_id = #{bookId}
 		]]>
 	</select>
 	
