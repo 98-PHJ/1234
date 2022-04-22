@@ -44,10 +44,10 @@ public class BookController {
 
 		ModelAndView mav = new ModelAndView();
 		if(rs == 1) {
-			mav.setViewName("redirect:/list");			
+			mav.setViewName("redirect:/list");
 		}else {
 			mav.setViewName("redirect:/create");
-		}		
+		}
 
 		return mav;
 	}
